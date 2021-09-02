@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+// Login page
+
 public class LoginPage {
 
 	WebDriver driver;
@@ -14,7 +16,7 @@ public class LoginPage {
 		this.driver = ldriver;
 	}
 
-	@FindBy(name="email") WebElement userName; 
+	@FindBy(name="email") WebElement userName1; 
 	@FindBy(name="password") WebElement passWord;
 	@FindBy(xpath = "//div[text()='Login']") WebElement loginBtn;
 
@@ -26,7 +28,7 @@ public class LoginPage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		userName.sendKeys(usernameApplication);
+		userName1.sendKeys(usernameApplication);
 		passWord.sendKeys(passwordApplication);
 		loginBtn.click();
 	}
